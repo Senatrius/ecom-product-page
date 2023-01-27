@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        underline: '0px -4px 0px red inset'
+        underline: '0px -4px 0px hsl(26, 100%, 55%) inset'
       }
     },
     colors: {
@@ -21,7 +21,10 @@ module.exports = {
         paragraph: 'hsl(219, 9%, 45%)',
         discount: 'hsl(27, 82%, 94%)',
         control: 'hsl(223, 64%, 98%)'
-      }
+      },
+      white: 'white',
+      overlay: 'hsla(0, 0%, 0%, .75)',
+      border: 'hsl(240, 5%, 91%)'
     },
     fontSize: {
       'm-nav': [
