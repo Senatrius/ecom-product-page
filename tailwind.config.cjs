@@ -9,6 +9,9 @@ module.exports = {
     extend: {
       boxShadow: {
         underline: '0px -4px 0px hsl(26, 100%, 55%) inset'
+      },
+      fontFamily: {
+        kumbh: ['Kumbh Sans', 'sans-serif']
       }
     },
     colors: {
@@ -121,7 +124,7 @@ module.exports = {
         {
           fontWeight: 700
         }
-      ],
+      ]
     }
   },
   plugins: []
