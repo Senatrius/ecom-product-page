@@ -16,7 +16,7 @@ export const Lightbox = ({
 }) => {
   return (
     <FocusTrap>
-      <section className='fixed inset-0 z-20 flex min-h-screen items-center overflow-auto bg-overlay p-12'>
+      <section className='fixed inset-0 z-20 flex min-h-screen items-center overflow-auto bg-overlay p-12 pt-60'>
         <div className='relative mx-auto flex max-w-[34.5rem] flex-col justify-center'>
           <button
             onClick={() => setDisplayImage(false)}
