@@ -34,7 +34,7 @@ export const Slider = () => {
           nextImage={nextImage}
         />
       )}
-      <div className='relative w-full max-w-[40.625rem]'>
+      <div className='relative w-full max-w-[48rem]'>
         <div className='absolute left-1/2 top-1/2 flex w-[92%] -translate-x-1/2 -translate-y-1/2 items-center justify-between lg:hidden'>
           <button
             aria-label='previous image'
