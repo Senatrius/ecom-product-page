@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import { CartContext } from '../App';
 
 export const AddToCart = () => {
-  const [selectedProducts, setSelectedProducts] = useState<number>(0);
+  const [selectedProducts, setSelectedProducts] = useState<number>(1);
   const { products, setProducts } = useContext(CartContext);
 
   const increaseProduct = () => {
@@ -10,20 +10,21 @@ export const AddToCart = () => {
   };
 
   const decreaseProduct = () => {
-    if (selectedProducts > 0) {
+    if (selectedProducts > 1) {
       setSelectedProducts(selectedProducts - 1);
     }
   };
 
   const addToCart = () => {
     setProducts(products + selectedProducts);
-    setSelectedProducts(0);
+    setSelectedProducts(1);
   };
 
   return (
     <div className='flex flex-col gap-4 md:flex-row'>
       <div className='flex items-center rounded-md bg-secondary-control'>
         <button
+          aria-label='remove 1 from product count'
           onClick={decreaseProduct}
           className='p-5 text-primary-orange hover:text-primary-orange-hover focus:text-primary-orange-hover'>
           <svg
@@ -36,10 +37,20 @@ export const AddToCart = () => {
             />
           </svg>
         </button>
-        <span className='grow p-5 text-center text-discount-unit text-primary-text'>
-          {selectedProducts}
-        </span>
+        <input
+          aria-live='polite'
+          aria-label='product count to add to cart'
+          type='number'
+          className='min-w-0 grow bg-secondary-control p-5 text-center text-discount-unit text-primary-text'
+          value={selectedProducts || 1}
+          max={100}
+          min={1}
+          size={1}
+          onChange={e =>
+            setSelectedProducts(parseInt(e.currentTarget.value))
+          }></input>
         <button
+          aria-label='add 1 to product count'
           onClick={increaseProduct}
           className='p-5 text-primary-orange hover:text-primary-orange-hover focus:text-primary-orange-hover'>
           <svg
