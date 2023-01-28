@@ -1,8 +1,31 @@
+import { useContext, useState } from 'react';
+import { CartContext } from '../App';
+
 export const AddToCart = () => {
+  const [selectedProducts, setSelectedProducts] = useState<number>(0);
+  const { products, setProducts } = useContext(CartContext);
+
+  const increaseProduct = () => {
+    setSelectedProducts(selectedProducts + 1);
+  };
+
+  const decreaseProduct = () => {
+    if (selectedProducts > 0) {
+      setSelectedProducts(selectedProducts - 1);
+    }
+  };
+
+  const addToCart = () => {
+    setProducts(products + selectedProducts);
+    setSelectedProducts(0);
+  };
+
   return (
     <div className='flex flex-col gap-4 md:flex-row'>
       <div className='flex items-center rounded-md bg-secondary-control'>
-        <button className='p-5 text-primary-orange hover:text-primary-orange-hover focus:text-primary-orange-hover'>
+        <button
+          onClick={decreaseProduct}
+          className='p-5 text-primary-orange hover:text-primary-orange-hover focus:text-primary-orange-hover'>
           <svg
             width='12'
             height='4'
@@ -14,9 +37,11 @@ export const AddToCart = () => {
           </svg>
         </button>
         <span className='grow p-5 text-center text-discount-unit text-primary-text'>
-          5
+          {selectedProducts}
         </span>
-        <button className='p-5 text-primary-orange hover:text-primary-orange-hover focus:text-primary-orange-hover'>
+        <button
+          onClick={increaseProduct}
+          className='p-5 text-primary-orange hover:text-primary-orange-hover focus:text-primary-orange-hover'>
           <svg
             width='12'
             height='12'
@@ -28,7 +53,9 @@ export const AddToCart = () => {
           </svg>
         </button>
       </div>
-      <button className='flex grow items-center justify-center gap-3 rounded-md bg-primary-orange p-5 text-button text-white hover:bg-primary-orange-hover focus:bg-primary-orange-hover'>
+      <button
+        onClick={addToCart}
+        className='flex grow items-center justify-center gap-3 rounded-md bg-primary-orange p-5 text-button text-white hover:bg-primary-orange-hover focus:bg-primary-orange-hover'>
         <svg
           width='22'
           height='20'
