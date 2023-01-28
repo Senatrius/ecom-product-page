@@ -14,12 +14,13 @@ module.exports = {
     colors: {
       primary: {
         orange: 'hsl(26, 100%, 55%)',
-        'orange-hover': 'hsl(25, 100%, 94%)',
+        'orange-hover': 'hsl(27, 100%, 71%)',
         text: 'hsl(220, 13%, 13%)'
       },
       secondary: {
         paragraph: 'hsl(219, 9%, 45%)',
         discount: 'hsl(27, 82%, 94%)',
+        crossed: 'hsl(220, 14%, 75%)',
         control: 'hsl(223, 64%, 98%)'
       },
       white: 'white',
