@@ -69,7 +69,7 @@ module.exports = {
         }
       ],
       'm-paragraph': [
-        '15px',
+        '0.9375rem',
         {
           fontWeight: 400,
           lineHeight: '165%',
@@ -77,7 +77,7 @@ module.exports = {
         }
       ],
       'd-paragraph': [
-        '15px',
+        '0.9375rem',
         {
           fontWeight: 400,
           lineHeight: '165%',
@@ -85,37 +85,43 @@ module.exports = {
         }
       ],
       price: [
-        '28px',
+        '1.75rem',
         {
           fontWeight: 700,
           letterSpacing: '0.035em'
         }
       ],
       'discount-unit': [
-        '16px',
+        '1rem',
         {
           fontWeight: 700,
           letterSpacing: '0.03em'
         }
       ],
       button: [
-        '16px',
+        '1rem',
         {
           fontWeight: 700
         }
       ],
       'cart-label': [
-        '16px',
+        '1rem',
         {
           fontWeight: 700
         }
       ],
       'cart-item': [
-        '16px',
+        '1rem',
         {
           fontWeight: 400
         }
-      ]
+      ],
+      'cart-count': [
+        '0.625rem',
+        {
+          fontWeight: 700
+        }
+      ],
     }
   },
   plugins: []
