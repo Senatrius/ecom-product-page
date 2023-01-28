@@ -49,41 +49,17 @@ export const Header = () => {
           className={`text-m-nav md:text-d-nav ${
             isMenuOpen ? 'flex' : 'hidden'
           } absolute top-0 left-0 z-[5] min-h-screen w-[66.6%] max-w-[20rem] flex-col bg-white pt-24 pb-12 pl-[6.9%] text-primary-text md:relative md:mr-4 md:flex md:min-h-0 md:max-w-full md:flex-row md:gap-5 md:p-0 md:text-secondary-paragraph lg:gap-8`}>
-          <li>
-            <a
-              className='inline-block w-full border-primary-orange py-[0.625rem] hover:border-r-4 focus:border-r-4 md:border-none md:pt-10 md:pb-12 md:hover:shadow-underline md:focus:shadow-underline '
-              href='#'>
-              Collections
-            </a>
-          </li>
-          <li>
-            <a
-              className='inline-block w-full border-primary-orange py-[0.625rem] hover:border-r-4 focus:border-r-4 md:border-none md:pt-10 md:pb-12 md:hover:shadow-underline md:focus:shadow-underline '
-              href='#'>
-              Men
-            </a>
-          </li>
-          <li>
-            <a
-              className='inline-block w-full border-primary-orange py-[0.625rem] hover:border-r-4 focus:border-r-4 md:border-none md:pt-10 md:pb-12 md:hover:shadow-underline md:focus:shadow-underline '
-              href='#'>
-              Women
-            </a>
-          </li>
-          <li>
-            <a
-              className='inline-block w-full border-primary-orange py-[0.625rem] hover:border-r-4 focus:border-r-4 md:border-none md:pt-10 md:pb-12 md:hover:shadow-underline md:focus:shadow-underline '
-              href='#'>
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              className='inline-block w-full border-primary-orange py-[0.625rem] hover:border-r-4 focus:border-r-4 md:border-none md:pt-10 md:pb-12 md:hover:shadow-underline md:focus:shadow-underline '
-              href='#'>
-              Contact
-            </a>
-          </li>
+          {['Collections', 'Men', 'Women', 'About', 'Contact'].map(
+            (link, idx) => (
+              <li key={idx}>
+                <a
+                  className='inline-block w-full border-primary-orange py-[0.625rem] hover:border-r-4 focus:border-r-4 md:border-none md:pt-10 md:pb-12 md:hover:shadow-underline md:focus:shadow-underline '
+                  href='#'>
+                  {link}
+                </a>
+              </li>
+            )
+          )}
         </ul>
         <button className='ml-auto text-secondary-paragraph hover:text-primary-text focus:text-primary-text'>
           <svg
