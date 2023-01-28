@@ -64,7 +64,7 @@ export const Slider = () => {
             image === 2 || image === 3 ? 'object-top' : 'object-center'
           } md:max-h-[25rem] md:min-w-[18.75rem] md:rounded-2xl lg:max-h-full`}
           src={`./images/image-product-${image}.jpg`}
-          alt=''
+          alt='sneakers product photo'
         />
         <ul className='mt-7 hidden items-center justify-between gap-7 lg:flex'>
           <li>
@@ -79,7 +79,7 @@ export const Slider = () => {
                   image === 1 && 'opacity-50'
                 } group-focus-within:opacity-50 group-hover:opacity-50`}
                 src='./images/image-product-1-thumbnail.jpg'
-                alt=''
+                alt='sneaker product thumbnail 1'
               />
             </button>
           </li>
@@ -95,7 +95,7 @@ export const Slider = () => {
                   image === 2 && 'opacity-50'
                 } group-focus-within:opacity-50 group-hover:opacity-50`}
                 src='./images/image-product-2-thumbnail.jpg'
-                alt=''
+                alt='sneaker product thumbnail 2'
               />
             </button>
           </li>
@@ -111,7 +111,7 @@ export const Slider = () => {
                   image === 3 && 'opacity-50'
                 } group-focus-within:opacity-50 group-hover:opacity-50`}
                 src='./images/image-product-3-thumbnail.jpg'
-                alt=''
+                alt='sneaker product thumbnail 3'
               />
             </button>
           </li>
@@ -127,7 +127,7 @@ export const Slider = () => {
                   image === 4 && 'opacity-50'
                 } group-focus-within:opacity-50 group-hover:opacity-50`}
                 src='./images/image-product-4-thumbnail.jpg'
-                alt=''
+                alt='sneaker product thumbnail 4'
               />
             </button>
           </li>
