@@ -1,5 +1,6 @@
 import { useContext, useState } from 'react';
 import { CartContext } from '../App';
+import { Button } from './Button';
 
 export const AddToCart = () => {
   const [selectedProducts, setSelectedProducts] = useState<number>(1);
@@ -26,7 +27,7 @@ export const AddToCart = () => {
         <button
           aria-label='remove 1 from product count'
           onClick={decreaseProduct}
-          className='p-5 text-primary-orange hover:text-primary-orange-hover focus:text-primary-orange-hover'>
+          className='p-4 text-primary-orange hover:text-primary-orange-hover focus:text-primary-orange-hover'>
           <svg
             width='12'
             height='4'
@@ -41,7 +42,7 @@ export const AddToCart = () => {
           aria-live='polite'
           aria-label='product count to add to cart'
           type='number'
-          className='min-w-0 grow bg-secondary-control p-5 text-center text-discount-unit text-primary-text'
+          className='min-w-0 grow bg-secondary-control p-4 text-center text-discount-unit text-primary-text'
           value={selectedProducts || 1}
           max={100}
           min={1}
@@ -52,7 +53,7 @@ export const AddToCart = () => {
         <button
           aria-label='add 1 to product count'
           onClick={increaseProduct}
-          className='p-5 text-primary-orange hover:text-primary-orange-hover focus:text-primary-orange-hover'>
+          className='p-4 text-primary-orange hover:text-primary-orange-hover focus:text-primary-orange-hover'>
           <svg
             width='12'
             height='12'
@@ -64,9 +65,7 @@ export const AddToCart = () => {
           </svg>
         </button>
       </div>
-      <button
-        onClick={addToCart}
-        className='flex grow items-center justify-center gap-3 rounded-md bg-primary-orange p-5 text-button text-white hover:bg-primary-orange-hover focus:bg-primary-orange-hover'>
+      <Button click={addToCart}>
         <svg
           width='22'
           height='20'
@@ -78,7 +77,7 @@ export const AddToCart = () => {
           />
         </svg>
         Add to cart
-      </button>
+      </Button>
     </div>
   );
 };
